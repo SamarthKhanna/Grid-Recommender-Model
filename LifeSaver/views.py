@@ -1,6 +1,5 @@
-from rest_framework.response import Response
 from .forms import LungForm
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from .utils import predict
 from django.conf import settings
 import os
