@@ -6,3 +6,11 @@ class LungForm(forms.ModelForm):
     class Meta:
         model = Lungs
         fields = ('input_image',)
+        widgets = {
+            'input_image': forms.FileInput(attrs={
+                'accept': '.dcm',
+            })
+        }
+        labels = {
+            'input_image': 'Please upload a dicom image:',
+        }

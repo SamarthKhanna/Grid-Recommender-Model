@@ -4,10 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size:30px;
+        }
+        input {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 25px;
+            padding: 5px;
+            padding-top: 20px;
+        }
+        label {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        body {
+            background-color: black;
+            background-image: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/318/318110/illustration-of-a-collapsed-lung.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-position: bottom;
+            color: whitesmoke;
+        }
+        .center {
+            margin:0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
 
-    <form method='POST' enctype="multipart/form-data">
+    <form class="center" method='POST' enctype="multipart/form-data">
         {% csrf_token %} 
         {{ form.as_p }}
         <button type="submit" value="submit">Submit</button>

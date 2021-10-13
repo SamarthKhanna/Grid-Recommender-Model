@@ -5,9 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .text-16{
+            font-size: 25px;
+        }
+        .buttonify {
+            text-decoration: none;
+            background-color: beige;
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 5%;
+            width: 10%;
+        }
+        .buttonify:visited{
+            text-decoration: none;
+            color:black;
+        }
+        .buttonify:hover {
+            background-color: gray;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <img src = "{{fileName}}" alt="{{message}}">
-    <a href="http://127.0.0.1:8000/form">Back</a>
+    <h1 class="center">Results:</h1>
+    <img src = "{{fileName}}" alt="{{message}}" class="center">
+    <div class="center text-16">{{message}}</div>
+    <a class = 'buttonify center' href="http://127.0.0.1:8000/form">Back</a>
 </body>
 </html>
